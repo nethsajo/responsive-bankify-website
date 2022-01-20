@@ -1,0 +1,36 @@
+{
+  "name": "responsive-bankify-website",
+  "version": "1.0.0",
+  "description": "A digital banking landing page",
+  "main": "index.js",
+  "scripts": {
+    "write:sass": "node-sass ./assets/sass/main.scss ./assets/css/styles.css",
+    "watch:sass": "nodemon -e scss -x \"npm run write:sass\"",
+    "devserver": "live-server --browser=chrome",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass ./assets/sass/main.scss ./assets/css/styles.comp.css --output-style expanded",
+    "prefix:css": "postcss ./assets/css/styles.comp.css -o ./assets/css/styles.prefix.css --use autoprefixer",
+    "compress:css": "node-sass ./assets/css/styles.prefix.css ./assets/css/styles.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "author": "Jan Kenneth Sajo",
+  "license": "ISC",
+  "browserslist": "last 10 versions",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "concat": "^1.0.3",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.4",
+    "postcss-cli": "^9.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nethsajo/responsive-bankify-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nethsajo/responsive-bankify-website/issues"
+  },
+  "homepage": "https://github.com/nethsajo/responsive-bankify-website#readme"
+}
