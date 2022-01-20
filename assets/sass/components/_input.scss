@@ -1,0 +1,29 @@
+.input {
+  &__label {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+  }
+
+  &__form {
+    width: 100%;
+    font-size: 1.6rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 0.8rem;
+    background-color: transparent;
+    border: 1px solid var(--color-white-dark);
+    border-radius: var(--b-radius);
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 2.4rem rgba(0, 0, 0, 0.03);
+      border-bottom: 3px solid var(--color-primary);
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid var(--color-red);
+    }
+  }
+}

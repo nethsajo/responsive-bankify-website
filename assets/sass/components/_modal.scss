@@ -1,0 +1,70 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80rem;
+  background-color: var(--color-white);
+  box-shadow: 0 0 2.4rem rgba(0, 0, 0, 0.05);
+  border-radius: var(--b-radius-11);
+  z-index: 9999;
+  transition: var(--transition);
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2.4rem 3.2rem;
+    gap: 3.2rem;
+    border-bottom: 1px solid var(--color-white-dark);
+  }
+
+  &__close-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    align-self: flex-start;
+  }
+
+  &__close-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: var(--color-grey);
+    transition: var(--transition);
+
+    &:hover {
+      fill: var(--color-grey-dark);
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  &__subheading {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    max-width: 40rem;
+  }
+
+  &__body {
+    padding: 2.4rem 3.2rem;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2.4rem 3.2rem;
+    margin-left: auto;
+  }
+}
