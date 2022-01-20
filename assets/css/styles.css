@@ -292,7 +292,7 @@ strong {
     height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: opacity 0.5s ease-in-out; }
+    transition: opacity 1s ease-in-out; }
     .operations__img--active {
       height: auto;
       opacity: 1; }
@@ -301,6 +301,96 @@ strong {
     margin-top: 3.2rem;
     border-radius: var(--b-radius-11);
     display: none; }
+
+.slider {
+  max-width: 100rem;
+  margin: 0 auto;
+  height: 50rem;
+  position: relative;
+  overflow: hidden; }
+  .slider__controls {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    gap: 1.2rem; }
+  .slider__btn {
+    width: 4.8rem;
+    height: 4.8rem;
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 10;
+    color: var(--color-grey); }
+    .slider__btn:hover {
+      background-color: var(--color-primary);
+      color: var(--color-white-light); }
+  .slider__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: currentColor; }
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s; }
+
+.testimonial {
+  display: grid;
+  grid-template-columns: 25rem 1fr;
+  column-gap: 4.8rem;
+  align-items: center; }
+  .testimonial__author {
+    font-style: normal; }
+  .testimonial__photo-small {
+    grid-row: 1 / span 2;
+    width: 6.5rem;
+    border-radius: 50%;
+    display: none; }
+  .testimonial__img {
+    position: relative; }
+  .testimonial__photo {
+    max-width: 25rem;
+    max-height: 37.5rem;
+    width: 100%;
+    height: auto;
+    border-radius: var(--b-radius); }
+  .testimonial__name {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    color: var(--color-primary);
+    align-self: end; }
+  .testimonial__location {
+    font-size: 1.6rem;
+    color: var(--color-primary-light); }
+  .testimonial__heading {
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.4;
+    position: relative; }
+    .testimonial__heading::after {
+      content: '\201C';
+      display: inline-block;
+      font-family: sans-serif;
+      position: absolute;
+      top: -6rem;
+      left: 0;
+      font-size: 15rem;
+      line-height: 1;
+      color: var(--color-primary-light);
+      opacity: 0.7;
+      z-index: -10; }
+  .testimonial__text {
+    font-size: 1.6rem;
+    line-height: 1.6; }
 
 .header {
   display: flex;

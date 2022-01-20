@@ -1,0 +1,49 @@
+.slider {
+  max-width: 100rem;
+  margin: 0 auto;
+  height: 50rem;
+  position: relative;
+  overflow: hidden;
+
+  &__controls {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  &__btn {
+    width: 4.8rem;
+    height: 4.8rem;
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 10;
+    color: var(--color-grey);
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: var(--color-white-light);
+    }
+  }
+
+  &__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: currentColor;
+  }
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s;
+}
