@@ -23,3 +23,8 @@ main {
 a {
   text-decoration: none;
 }
+
+::selection {
+  background-color: var(--color-primary-light);
+  color: var(--color-white-light);
+}

@@ -15,6 +15,7 @@
     display: flex;
     justify-content: end;
     position: relative;
+    animation: moveInRight 1.8s cubic-bezier(0.23, 1, 0.32, 1);
 
     &::before,
     &::after {
@@ -45,6 +46,8 @@
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.6;
+    color: var(--color-grey);
+    animation: moveInLeft 1.7s ease-in-out;
   }
 
   &__textbox {

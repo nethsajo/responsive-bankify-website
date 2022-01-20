@@ -45,6 +45,7 @@
 
   &--normal {
     color: var(--color-primary);
+    animation: moveInBottom 1s ease;
 
     //Btn
     border: none;
