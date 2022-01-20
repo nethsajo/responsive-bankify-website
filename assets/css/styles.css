@@ -537,3 +537,6 @@ strong {
   padding: 12.8rem 0 9.6rem 0; }
   .section--bg {
     background-color: var(--color-white-light); }
+  .section--signup {
+    padding: 9.6rem 0;
+    text-align: center; }
