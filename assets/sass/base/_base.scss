@@ -13,7 +13,11 @@ html {
 }
 
 body {
-  background-color: #fff;
+  background-color: var(--color-white);
+}
+
+main {
+  position: relative;
 }
 
 a {

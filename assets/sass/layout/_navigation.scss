@@ -1,3 +1,11 @@
+%nav-placeholder {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
 .navigation {
   &__list {
     list-style: none;
@@ -9,11 +17,7 @@
   &__link {
     &:link,
     &:visited {
-      display: inline-block;
-      font-size: 1.4rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: var(--transition);
+      @extend %nav-placeholder;
       color: var(--color-grey);
       position: relative;
     }
@@ -36,6 +40,29 @@
       &:after {
         width: 100%;
       }
+    }
+  }
+
+  //Button Link
+  &__btn {
+    &:link,
+    &:visited {
+      @extend %nav-placeholder;
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      padding: 1.2rem 2.4rem;
+      border-radius: var(--b-radius);
+      transition: var(--transition);
+    }
+
+    &:hover {
+      background-color: var(--color-primary-dark);
+      box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.07);
+      transform: translateY(-0.4rem);
+    }
+
+    &:active {
+      transform: translateY(0);
     }
   }
 
