@@ -12,13 +12,22 @@ body {
   animation: moveInLeft 1.5s ease-in-out;
 
   span {
-    background-image: linear-gradient(
-      to right bottom,
-      var(--color-primary-light),
-      var(--color-primary-dark)
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    @include gradient(var(--color-primary-light), var(--color-primary-dark));
   }
+}
+
+.heading-secondary {
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+
+.subheading {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  @include gradient(var(--color-primary), var(--color-primary-light));
 }

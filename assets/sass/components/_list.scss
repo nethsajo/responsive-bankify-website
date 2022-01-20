@@ -1,0 +1,23 @@
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: var(--color-primary);
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+}

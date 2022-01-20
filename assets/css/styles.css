@@ -88,6 +88,23 @@ body {
     -webkit-background-clip: text;
     color: transparent; }
 
+.heading-secondary {
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0.5px; }
+
+.subheading {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-primary-light));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; }
+
 .mb-xs {
   margin-bottom: 1.6rem; }
 
@@ -174,6 +191,62 @@ strong {
 
 .btn:not(:last-child) {
   margin-right: 2.4rem; }
+
+.feature {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 9.6rem 6.4rem;
+  align-items: center; }
+  .feature:not(:last-child) {
+    margin-bottom: 9.6rem; }
+  .feature__img {
+    width: 100%;
+    border-radius: var(--b-radius-11); }
+  .feature__header {
+    display: flex;
+    align-items: center;
+    column-gap: 2.4rem; }
+  .feature__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.6rem;
+    height: 5.6rem;
+    background-color: var(--color-primary-light-two);
+    padding: 1.6rem;
+    border-radius: var(--b-radius-round); }
+    .feature__icon svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      fill: var(--color-primary); }
+  .feature__title {
+    font-size: 2.4rem;
+    line-height: 1.4;
+    font-weight: 700;
+    color: var(--color-grey-dark); }
+  .feature__description {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--color-grey); }
+  .feature__lazy-img {
+    filter: blur(1rem); }
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem; }
+  .list__item {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem; }
+  .list__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: var(--color-primary); }
+  .list__text {
+    font-size: 1.6rem;
+    line-height: 1.6; }
 
 .header {
   display: flex;
@@ -315,3 +388,8 @@ strong {
 
 .section-hero {
   padding: 4.8rem 0 8rem 0; }
+
+.section {
+  padding: 12.8rem 0 9.6rem 0; }
+  .section--bg {
+    background-color: var(--color-white-light); }

@@ -4,3 +4,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin gradient($colorOne, $colorTwo) {
+  background-image: linear-gradient(to right bottom, $colorOne, $colorTwo);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
