@@ -7,17 +7,18 @@
   margin: 0 auto;
   position: relative;
 
+  @include responsive(tab-landscape) {
+    padding: 0 3.2rem;
+  }
+
   &__logo {
     font-size: 2rem;
     font-weight: 800;
-    background-image: linear-gradient(
+    @include gradient(
       to left,
       var(--color-primary),
       var(--color-primary-light)
     );
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
     text-transform: uppercase;
   }
 }

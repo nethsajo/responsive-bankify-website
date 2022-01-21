@@ -11,8 +11,16 @@ body {
   line-height: 1.1;
   animation: moveInLeft 1.5s ease-in-out;
 
+  @include responsive(tab-portrait) {
+    font-size: 5.2rem;
+  }
+
   span {
-    @include gradient(var(--color-primary-light), var(--color-primary-dark));
+    @include gradient(
+      to right bottom,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
   }
 }
 
@@ -29,5 +37,9 @@ body {
   font-weight: 700;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
-  @include gradient(var(--color-primary), var(--color-primary-light));
+  @include gradient(
+    to right bottom,
+    var(--color-primary),
+    var(--color-primary-light)
+  );
 }

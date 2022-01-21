@@ -13,7 +13,11 @@
   &__logo {
     font-size: 2rem;
     text-transform: uppercase;
-    @include gradient(var(--color-primary), var(--color-primary-light));
+    @include gradient(
+      to left,
+      var(--color-primary),
+      var(--color-primary-light)
+    );
   }
 
   &__social {

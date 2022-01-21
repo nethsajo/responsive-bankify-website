@@ -5,8 +5,8 @@
   transform: translate(-50%, -50%);
 }
 
-@mixin gradient($colorOne, $colorTwo) {
-  background-image: linear-gradient(to right bottom, $colorOne, $colorTwo);
+@mixin gradient($direction, $colorOne, $colorTwo) {
+  background-image: linear-gradient($direction, $colorOne, $colorTwo);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -15,6 +15,7 @@
 //MEDIA QUERY MANAGER
 //1800px - 112.5em
 //1200px - 75em
+//900px - 56.25em
 
 @mixin responsive($breakpoint) {
   @if $breakpoint == big-desktop {
@@ -25,6 +26,12 @@
 
   @if $breakpoint == tab-landscape {
     @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-portrait {
+    @media only screen and (max-width: 56.25em) {
       @content;
     }
   }

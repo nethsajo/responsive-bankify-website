@@ -63,6 +63,9 @@ html {
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
   background-color: var(--color-white); }
@@ -102,6 +105,9 @@ body {
   font-weight: 700;
   line-height: 1.1;
   animation: moveInLeft 1.5s ease-in-out; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-primary {
+      font-size: 5.2rem; } }
   .heading-primary span {
     background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
     background-clip: text;
@@ -498,7 +504,7 @@ strong {
   .footer__logo {
     font-size: 2rem;
     text-transform: uppercase;
-    background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-primary-light));
+    background-image: linear-gradient(to left, var(--color-primary), var(--color-primary-light));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent; }
@@ -554,6 +560,9 @@ strong {
   height: var(--nav-height);
   margin: 0 auto;
   position: relative; }
+  @media only screen and (max-width: 75em) {
+    .header {
+      padding: 0 3.2rem; } }
   .header__logo {
     font-size: 2rem;
     font-weight: 800;
