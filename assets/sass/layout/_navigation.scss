@@ -4,13 +4,49 @@
   font-weight: 500;
   text-decoration: none;
   transition: var(--transition);
+
+  @include responsive(tab-portrait) {
+    font-size: 3rem;
+  }
 }
 
 .navigation {
+  @include responsive(tab-portrait) {
+    background-color: var(--color-white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in;
+    z-index: 5;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  &__open .navigation {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
   &__list {
     list-style: none;
     display: flex;
     align-items: center;
+
+    @include responsive(tab-portrait) {
+      flex-direction: column;
+      gap: 4.8rem;
+    }
   }
 
   //Link
@@ -69,6 +105,10 @@
   &__item {
     &:not(:last-child) {
       margin-right: 4.8rem;
+
+      @include responsive(tab-portrait) {
+        margin-right: 0;
+      }
     }
   }
 }
