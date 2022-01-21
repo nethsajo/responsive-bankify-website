@@ -183,7 +183,7 @@ allSections.forEach(s => {
 const imageTargets = document.querySelectorAll('img[data-src]');
 const loadImage = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry);
+  // console.log(entry);
 
   if (!entry.isIntersecting) return;
 
@@ -205,3 +205,54 @@ const imageObserver = new IntersectionObserver(loadImage, {
 });
 
 imageTargets.forEach(img => imageObserver.observe(img));
+
+///////////////////////////////////////////////////////////
+//Slider
+const slider = function () {
+  const slides = document.querySelectorAll('.slide');
+  const btnPrevious = document.querySelector('.slider__btn--left');
+  const btnNext = document.querySelector('.slider__btn--right');
+
+  let currentSlide = 0;
+  let maxSlide = slides.length;
+
+  const goToSlide = function (slide) {
+    slides.forEach(
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+  };
+
+  const nextSlide = function () {
+    if (currentSlide === maxSlide - 1) {
+      currentSlide = 0;
+    } else {
+      currentSlide++;
+    }
+    goToSlide(currentSlide);
+  };
+
+  const previousSlide = function () {
+    if (currentSlide === 0) {
+      currentSlide = maxSlide - 1;
+    } else {
+      currentSlide--;
+    }
+    goToSlide(currentSlide);
+  };
+
+  const init = function () {
+    goToSlide(0);
+  };
+  init();
+
+  //Event handlers
+  btnNext.addEventListener('click', nextSlide);
+  btnPrevious.addEventListener('click', previousSlide);
+
+  document.addEventListener('keydown', function (e) {
+    e.key === 'ArrowRight' && nextSlide();
+    e.key === 'ArrowLeft' && previousSlide();
+  });
+};
+
+slider();
