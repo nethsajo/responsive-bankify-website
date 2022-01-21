@@ -131,3 +131,77 @@ const headerObserver = new IntersectionObserver(stickyNavigation, {
   rootMargin: `-${headerHeight}px`,
 });
 headerObserver.observe(sectionHero);
+
+///////////////////////////////////////////////////////////
+//Menu Animation
+const handleHover = function (e) {
+  if (e.target.classList.contains('navigation__link')) {
+    const link = e.target;
+    const siblings = link
+      .closest('.navigation')
+      .querySelectorAll('.navigation__link');
+
+    siblings.forEach(element => {
+      if (element !== link) {
+        element.style.color = this;
+      }
+    });
+  }
+};
+
+nav.addEventListener('mouseover', handleHover.bind('var(--color-white-dark)'));
+nav.addEventListener('mouseout', handleHover.bind('var(--color-grey)'));
+
+///////////////////////////////////////////////////////////
+//Reveal Section
+const allSections = document.querySelectorAll('.section');
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  // console.log(entry);
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+allSections.forEach(s => {
+  sectionObserver.observe(s);
+  s.classList.add('section--hidden');
+});
+
+///////////////////////////////////////////////////////////
+//Lazy Loading Images
+
+//selects images with data-src attribute
+const imageTargets = document.querySelectorAll('img[data-src]');
+const loadImage = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (!entry.isIntersecting) return;
+
+  //Replace the lazy load image with the data-src
+  entry.target.src = entry.target.dataset.src;
+
+  //Remove the feature__lazy-img class
+  entry.target.addEventListener('load', function () {
+    entry.target.classList.remove('feature__lazy-img');
+  });
+
+  observer.unobserve(entry.target);
+};
+
+const imageObserver = new IntersectionObserver(loadImage, {
+  root: null,
+  threshold: 0,
+  rootMargin: '200px',
+});
+
+imageTargets.forEach(img => imageObserver.observe(img));

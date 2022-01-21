@@ -4,6 +4,7 @@
 
 .section {
   padding: 12.8rem 0 9.6rem 0;
+  transition: transform 1s, opacity 1s;
 
   &--bg {
     background-color: var(--color-white-light);
@@ -12,5 +13,10 @@
   &--signup {
     padding: 9.6rem 0;
     text-align: center;
+  }
+
+  &--hidden {
+    opacity: 0;
+    transform: translateY(8rem);
   }
 }

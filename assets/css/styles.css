@@ -885,9 +885,13 @@ strong {
   padding: 4.8rem 0 8rem 0; }
 
 .section {
-  padding: 12.8rem 0 9.6rem 0; }
+  padding: 12.8rem 0 9.6rem 0;
+  transition: transform 1s, opacity 1s; }
   .section--bg {
     background-color: var(--color-white-light); }
   .section--signup {
     padding: 9.6rem 0;
     text-align: center; }
+  .section--hidden {
+    opacity: 0;
+    transform: translateY(8rem); }
