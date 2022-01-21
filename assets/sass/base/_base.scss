@@ -10,6 +10,14 @@ html {
   font-size: 62.5%; // 10/16 = 0.625 * 100 = 62.5%
   box-sizing: border-box;
   scroll-behavior: smooth;
+
+  @include responsive(big-desktop) {
+    font-size: 80%;
+  }
+
+  @include responsive(tab-landscape) {
+    font-size: 56.25%;
+  }
 }
 
 body {
