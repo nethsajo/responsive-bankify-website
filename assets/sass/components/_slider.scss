@@ -5,6 +5,10 @@
   position: relative;
   overflow: hidden;
 
+  @include responsive(phone) {
+    height: 45rem;
+  }
+
   &__controls {
     position: absolute;
     right: 0;

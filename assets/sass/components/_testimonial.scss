@@ -4,8 +4,19 @@
   column-gap: 4.8rem;
   align-items: center;
 
+  @include responsive(phone) {
+    grid-template-columns: 1fr;
+  }
+
   &__author {
     font-style: normal;
+
+    @include responsive(phone) {
+      display: grid;
+      grid-template-columns: 6.5rem 1fr;
+      align-items: center;
+      column-gap: 2.4rem;
+    }
   }
 
   &__photo-small {
@@ -13,10 +24,18 @@
     width: 6.5rem;
     border-radius: 50%;
     display: none;
+
+    @include responsive(phone) {
+      display: block;
+    }
   }
 
   &__img {
     position: relative;
+
+    @include responsive(phone) {
+      display: none;
+    }
   }
 
   &__photo {
@@ -33,6 +52,10 @@
     margin-bottom: 0.8rem;
     color: var(--color-primary);
     align-self: end;
+
+    @include responsive(phone) {
+      margin-bottom: 0;
+    }
   }
 
   &__location {
