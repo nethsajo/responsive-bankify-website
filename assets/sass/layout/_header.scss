@@ -14,11 +14,74 @@
   &__logo {
     font-size: 2rem;
     font-weight: 800;
+    text-transform: uppercase;
     @include gradient(
       to left,
       var(--color-primary),
       var(--color-primary-light)
     );
-    text-transform: uppercase;
+  }
+
+  &__menu-btn {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    width: 4.8rem;
+    height: 4.8rem;
+    display: none;
+    z-index: 100;
+
+    @include responsive(tab-portrait) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.active .header__menu-line {
+      background-color: transparent;
+    }
+
+    &.active .header__menu-line::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+
+    &.active .header__menu-line::after {
+      top: 0;
+      transform: rotate(-135deg);
+    }
+  }
+
+  &__menu-line {
+    position: relative;
+
+    &,
+    &::before,
+    &::after {
+      display: inline-block;
+      height: 2px;
+      background-color: var(--color-grey-dark);
+    }
+
+    & {
+      width: 2.3rem;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 3rem;
+      right: 0;
+      transition: var(--transition);
+    }
+
+    &::before {
+      top: -0.7rem;
+    }
+
+    &::after {
+      top: 0.7rem;
+    }
   }
 }
