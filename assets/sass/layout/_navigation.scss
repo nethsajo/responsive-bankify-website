@@ -8,6 +8,10 @@
   @include responsive(tab-portrait) {
     font-size: 3rem;
   }
+
+  @include responsive(phone-xs) {
+    font-size: 2.4rem;
+  }
 }
 
 .navigation {

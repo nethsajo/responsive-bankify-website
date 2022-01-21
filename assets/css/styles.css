@@ -684,6 +684,21 @@ strong {
     .header__menu-line::after {
       top: 0.7rem; }
 
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  z-index: 999; }
+
+.sticky .section-hero {
+  margin-top: 9.6rem; }
+
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -788,6 +803,9 @@ strong {
   @media only screen and (max-width: 56.25em) {
     .navigation__link:link, .navigation__link:visited, .navigation__btn:link, .navigation__btn:visited {
       font-size: 3rem; } }
+  @media only screen and (max-width: 26.25em) {
+    .navigation__link:link, .navigation__link:visited, .navigation__btn:link, .navigation__btn:visited {
+      font-size: 2.4rem; } }
 
 @media only screen and (max-width: 56.25em) {
   .navigation {

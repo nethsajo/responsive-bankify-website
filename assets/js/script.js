@@ -10,7 +10,14 @@ const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const sectionFeatures = document.querySelector('#section-features');
+const sectionHero = document.querySelector('.section-hero');
 const navigationList = document.querySelector('.navigation__list');
+const accordionContainer = document.querySelector(
+  '.operations__list-container'
+);
+const accordionHeading = document.querySelectorAll('.operations__heading');
+const accordionContent = document.querySelectorAll('.operations__content');
+const accordionImage = document.querySelectorAll('.operations__img');
 
 ///////////////////////////////////////////////////////////
 //Display year in footer
@@ -71,3 +78,56 @@ navigationList.addEventListener('click', function (e) {
     headerMenuBtn.classList.toggle('active');
   }
 });
+
+///////////////////////////////////////////////////////////
+//Accordion
+accordionContainer.addEventListener('click', function (e) {
+  const item = e.target;
+  const clicked = item.closest('.operations__heading');
+
+  if (!clicked) return;
+
+  //Remove active classes
+  accordionHeading.forEach(a =>
+    a.classList.remove('operations__heading--active')
+  );
+
+  //Activate the clicked heading
+  clicked.classList.add('operations__heading--active');
+
+  //Remove active classes of accordion content
+  accordionContent.forEach(c =>
+    c.classList.remove('operations__content--active')
+  );
+
+  //Remove active classes of accordion image
+  accordionImage.forEach(i => i.classList.remove('operations__img--active'));
+
+  //Activate the content
+  document
+    .querySelector(`.operations__content--${clicked.dataset.accordion}`)
+    .classList.add('operations__content--active');
+
+  //Activate the image
+  document
+    .querySelector(`.operations__img--${clicked.dataset.accordion}`)
+    .classList.add('operations__img--active');
+});
+
+///////////////////////////////////////////////////////////
+//Sticky navigation
+const headerHeight = header.getBoundingClientRect().height;
+
+const stickyNavigation = function (entries) {
+  const entry = entries[0];
+
+  if (!entry.isIntersecting) document.body.classList.add('sticky');
+  else document.body.classList.remove('sticky');
+};
+
+const headerObserver = new IntersectionObserver(stickyNavigation, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${headerHeight}px`,
+});
+headerObserver.observe(sectionHero);
