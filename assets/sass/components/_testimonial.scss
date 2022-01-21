@@ -58,6 +58,10 @@
       color: var(--color-primary-light);
       opacity: 0.7;
       z-index: -10;
+
+      @include responsive(tab-portrait) {
+        display: none;
+      }
     }
   }
 

@@ -11,6 +11,11 @@
     bottom: 0;
     display: flex;
     gap: 1.2rem;
+
+    @include responsive(tab-small) {
+      right: 50%;
+      transform: translateX(50%);
+    }
   }
 
   &__btn {

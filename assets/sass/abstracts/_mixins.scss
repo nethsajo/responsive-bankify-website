@@ -16,6 +16,7 @@
 //1800px - 112.5em
 //1200px - 75em
 //900px - 56.25em
+//800px - 50em
 
 @mixin responsive($breakpoint) {
   @if $breakpoint == big-desktop {
@@ -32,6 +33,12 @@
 
   @if $breakpoint == tab-portrait {
     @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-small {
+    @media only screen and (max-width: 50em) {
       @content;
     }
   }

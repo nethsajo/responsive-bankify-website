@@ -7,8 +7,17 @@
   padding: 0 3.2rem;
   gap: 9.6rem 6.4rem;
 
+  @include responsive(tab-small) {
+    grid-template-columns: 1fr;
+    gap: 6.4rem 4.8rem;
+  }
+
   &__img {
     width: 60%;
+
+    @include responsive(tab-small) {
+      width: 30%;
+    }
   }
 
   &__img-box {
@@ -16,6 +25,11 @@
     justify-content: end;
     position: relative;
     animation: moveInRight 1.8s cubic-bezier(0.23, 1, 0.32, 1);
+
+    @include responsive(tab-small) {
+      grid-row: 2;
+      justify-content: center;
+    }
 
     &::before,
     &::after {
@@ -31,6 +45,12 @@
       padding-bottom: 60%;
       border: 2px solid rgba(#d0bfff, 0.7);
       z-index: -1;
+
+      @include responsive(tab-small) {
+        width: 35%;
+        height: 35%;
+        padding-bottom: 35%;
+      }
     }
 
     &::after {
@@ -39,6 +59,12 @@
       padding-bottom: 45%;
       background-color: rgba(#d0bfff, 0.7);
       z-index: -2;
+
+      @include responsive(tab-small) {
+        width: 25%;
+        height: 25%;
+        padding-bottom: 25%;
+      }
     }
   }
 
@@ -51,5 +77,8 @@
   }
 
   &__textbox {
+    @include responsive(tab-small) {
+      text-align: center;
+    }
   }
 }

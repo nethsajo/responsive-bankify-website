@@ -4,6 +4,10 @@
   gap: 9.6rem 6.4rem;
   align-items: center;
 
+  @include responsive(tab-small) {
+    gap: 6.4rem 4.8rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: 9.6rem;
   }
@@ -41,6 +45,10 @@
     line-height: 1.4;
     font-weight: 700;
     color: var(--color-grey-dark);
+
+    @include responsive(tab-small) {
+      font-size: 2rem;
+    }
   }
 
   &__description {

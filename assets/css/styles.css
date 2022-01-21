@@ -119,6 +119,9 @@ body {
   font-weight: 800;
   line-height: 1.4;
   letter-spacing: 0.5px; }
+  @media only screen and (max-width: 50em) {
+    .heading-secondary {
+      font-size: 3rem; } }
 
 .subheading {
   display: inline-block;
@@ -223,6 +226,9 @@ strong {
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   gap: 9.6rem 6.4rem;
   align-items: center; }
+  @media only screen and (max-width: 50em) {
+    .feature {
+      gap: 6.4rem 4.8rem; } }
   .feature:not(:last-child) {
     margin-bottom: 9.6rem; }
   .feature__img {
@@ -250,6 +256,9 @@ strong {
     line-height: 1.4;
     font-weight: 700;
     color: var(--color-grey-dark); }
+    @media only screen and (max-width: 50em) {
+      .feature__title {
+        font-size: 2rem; } }
   .feature__description {
     font-size: 1.6rem;
     line-height: 1.6;
@@ -353,6 +362,11 @@ strong {
   grid-template-columns: repeat(2, 1fr);
   gap: 9.6rem 6.4rem;
   align-items: stretch; }
+  @media only screen and (max-width: 50em) {
+    .operations {
+      grid-template-columns: 1fr;
+      gap: 0;
+      align-items: center; } }
   .operations__accordion:not(:last-child) {
     border-bottom: 2px solid var(--color-primary-light-two);
     padding-bottom: 2.4rem;
@@ -396,11 +410,17 @@ strong {
     .operations__img--active {
       height: auto;
       opacity: 1; }
+    @media only screen and (max-width: 50em) {
+      .operations__img {
+        display: none; } }
   .operations__photo {
     width: 100%;
     margin-top: 3.2rem;
     border-radius: var(--b-radius-11);
     display: none; }
+    @media only screen and (max-width: 50em) {
+      .operations__photo {
+        display: block; } }
 
 .slider {
   max-width: 100rem;
@@ -414,6 +434,10 @@ strong {
     bottom: 0;
     display: flex;
     gap: 1.2rem; }
+    @media only screen and (max-width: 50em) {
+      .slider__controls {
+        right: 50%;
+        transform: translateX(50%); } }
   .slider__btn {
     width: 4.8rem;
     height: 4.8rem;
@@ -488,6 +512,9 @@ strong {
       color: var(--color-primary-light);
       opacity: 0.7;
       z-index: -10; }
+      @media only screen and (max-width: 56.25em) {
+        .testimonial__heading::after {
+          display: none; } }
   .testimonial__text {
     font-size: 1.6rem;
     line-height: 1.6; }
@@ -501,6 +528,12 @@ strong {
     gap: 9.6rem 6.4rem;
     padding-bottom: 4.8rem;
     border-bottom: 1px solid var(--color-primary-light-two); }
+    @media only screen and (max-width: 56.25em) {
+      .footer__wrapper {
+        column-gap: 4.8rem; } }
+    @media only screen and (max-width: 50em) {
+      .footer__wrapper {
+        grid-template-columns: repeat(2, 1fr); } }
   .footer__logo {
     font-size: 2rem;
     text-transform: uppercase;
@@ -619,13 +652,24 @@ strong {
   margin: 0 auto;
   padding: 0 3.2rem;
   gap: 9.6rem 6.4rem; }
+  @media only screen and (max-width: 50em) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 6.4rem 4.8rem; } }
   .hero__img {
     width: 60%; }
+    @media only screen and (max-width: 50em) {
+      .hero__img {
+        width: 30%; } }
   .hero__img-box {
     display: flex;
     justify-content: end;
     position: relative;
     animation: moveInRight 1.8s cubic-bezier(0.23, 1, 0.32, 1); }
+    @media only screen and (max-width: 50em) {
+      .hero__img-box {
+        grid-row: 2;
+        justify-content: center; } }
     .hero__img-box::before, .hero__img-box::after {
       content: '';
       display: block;
@@ -640,18 +684,31 @@ strong {
       padding-bottom: 60%;
       border: 2px solid rgba(208, 191, 255, 0.7);
       z-index: -1; }
+      @media only screen and (max-width: 50em) {
+        .hero__img-box::before {
+          width: 35%;
+          height: 35%;
+          padding-bottom: 35%; } }
     .hero__img-box::after {
       width: 45%;
       height: 45%;
       padding-bottom: 45%;
       background-color: rgba(208, 191, 255, 0.7);
       z-index: -2; }
+      @media only screen and (max-width: 50em) {
+        .hero__img-box::after {
+          width: 25%;
+          height: 25%;
+          padding-bottom: 25%; } }
   .hero__description {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.6;
     color: var(--color-grey);
     animation: moveInLeft 1.7s ease-in-out; }
+  @media only screen and (max-width: 50em) {
+    .hero__textbox {
+      text-align: center; } }
 
 .container, .container-sm {
   margin: 0 auto;

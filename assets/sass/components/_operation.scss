@@ -4,6 +4,12 @@
   gap: 9.6rem 6.4rem;
   align-items: stretch;
 
+  @include responsive(tab-small) {
+    grid-template-columns: 1fr;
+    gap: 0;
+    align-items: center;
+  }
+
   &__accordion {
     &:not(:last-child) {
       border-bottom: 2px solid var(--color-primary-light-two);
@@ -67,6 +73,10 @@
       height: auto;
       opacity: 1;
     }
+
+    @include responsive(tab-small) {
+      display: none;
+    }
   }
 
   &__photo {
@@ -74,5 +84,9 @@
     margin-top: 3.2rem;
     border-radius: var(--b-radius-11);
     display: none;
+
+    @include responsive(tab-small) {
+      display: block;
+    }
   }
 }

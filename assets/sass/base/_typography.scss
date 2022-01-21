@@ -29,6 +29,10 @@ body {
   font-weight: 800;
   line-height: 1.4;
   letter-spacing: 0.5px;
+
+  @include responsive(tab-small) {
+    font-size: 3rem;
+  }
 }
 
 .subheading {

@@ -8,6 +8,14 @@
     gap: 9.6rem 6.4rem;
     padding-bottom: 4.8rem;
     border-bottom: 1px solid var(--color-primary-light-two);
+
+    @include responsive(tab-portrait) {
+      column-gap: 4.8rem;
+    }
+
+    @include responsive(tab-small) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__logo {
