@@ -8,6 +8,10 @@
     gap: 6.4rem 4.8rem;
   }
 
+  @include responsive(phone-xs) {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+
   &:not(:last-child) {
     margin-bottom: 9.6rem;
   }
@@ -48,6 +52,10 @@
 
     @include responsive(tab-small) {
       font-size: 2rem;
+    }
+
+    @include responsive(phone-xs) {
+      font-size: 1.8rem;
     }
   }
 

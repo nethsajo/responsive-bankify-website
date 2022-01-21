@@ -235,6 +235,9 @@ strong {
   @media only screen and (max-width: 50em) {
     .feature {
       gap: 6.4rem 4.8rem; } }
+  @media only screen and (max-width: 26.25em) {
+    .feature {
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); } }
   .feature:not(:last-child) {
     margin-bottom: 9.6rem; }
   .feature__img {
@@ -265,6 +268,9 @@ strong {
     @media only screen and (max-width: 50em) {
       .feature__title {
         font-size: 2rem; } }
+    @media only screen and (max-width: 26.25em) {
+      .feature__title {
+        font-size: 1.8rem; } }
   .feature__description {
     font-size: 1.6rem;
     line-height: 1.6;
