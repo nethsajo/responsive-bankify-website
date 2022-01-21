@@ -9,6 +9,10 @@
     height: 45rem;
   }
 
+  @include responsive(phone-xs) {
+    height: 52rem;
+  }
+
   &__controls {
     position: absolute;
     right: 0;

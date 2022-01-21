@@ -16,6 +16,11 @@
     @include responsive(tab-small) {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    @include responsive(phone-xs) {
+      grid-template-columns: 1fr;
+      row-gap: 6.4rem;
+    }
   }
 
   &__logo {

@@ -18,6 +18,7 @@
 //900px - 56.25em
 //800px - 50em
 //600px - 37.5em
+//420px - 26.25em
 
 @mixin responsive($breakpoint) {
   @if $breakpoint == big-desktop {
@@ -46,6 +47,12 @@
 
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-xs {
+    @media only screen and (max-width: 26.25em) {
       @content;
     }
   }

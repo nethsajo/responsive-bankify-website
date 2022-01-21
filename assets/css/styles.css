@@ -108,6 +108,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .heading-primary {
       font-size: 5.2rem; } }
+  @media only screen and (max-width: 26.25em) {
+    .heading-primary {
+      font-size: 4.4rem; } }
   .heading-primary span {
     background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
     background-clip: text;
@@ -122,6 +125,9 @@ body {
   @media only screen and (max-width: 50em) {
     .heading-secondary {
       font-size: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.8rem; } }
 
 .subheading {
   display: inline-block;
@@ -431,6 +437,9 @@ strong {
   @media only screen and (max-width: 37.5em) {
     .slider {
       height: 45rem; } }
+  @media only screen and (max-width: 26.25em) {
+    .slider {
+      height: 52rem; } }
   .slider__controls {
     position: absolute;
     right: 0;
@@ -555,6 +564,10 @@ strong {
     @media only screen and (max-width: 50em) {
       .footer__wrapper {
         grid-template-columns: repeat(2, 1fr); } }
+    @media only screen and (max-width: 26.25em) {
+      .footer__wrapper {
+        grid-template-columns: 1fr;
+        row-gap: 6.4rem; } }
   .footer__logo {
     font-size: 2rem;
     text-transform: uppercase;
