@@ -4,8 +4,7 @@
   "description": "A digital banking landing page",
   "main": "index.js",
   "scripts": {
-    "write:sass": "node-sass ./assets/sass/main.scss ./assets/css/styles.css",
-    "watch:sass": "nodemon -e scss -x \"npm run write:sass\"",
+    "watch:sass": "node-sass ./assets/sass/main.scss ./assets/css/styles.css -w",
     "devserver": "live-server --browser=chrome",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass ./assets/sass/main.scss ./assets/css/styles.comp.css --output-style expanded",
