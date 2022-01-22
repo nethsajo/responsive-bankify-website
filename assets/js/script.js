@@ -18,6 +18,7 @@ const accordionContainer = document.querySelector(
 const accordionHeading = document.querySelectorAll('.operations__heading');
 const accordionContent = document.querySelectorAll('.operations__content');
 const accordionImage = document.querySelectorAll('.operations__img');
+const allSections = document.querySelectorAll('.section');
 
 ///////////////////////////////////////////////////////////
 //Display year in footer
@@ -117,9 +118,8 @@ accordionContainer.addEventListener('click', function (e) {
 ///////////////////////////////////////////////////////////
 //Sticky navigation
 const headerHeight = header.getBoundingClientRect().height;
-
 const stickyNavigation = function (entries) {
-  const entry = entries[0];
+  const [entry] = entries;
 
   if (!entry.isIntersecting) document.body.classList.add('sticky');
   else document.body.classList.remove('sticky');
@@ -148,14 +148,11 @@ const handleHover = function (e) {
     });
   }
 };
-
 nav.addEventListener('mouseover', handleHover.bind('var(--color-white-dark)'));
 nav.addEventListener('mouseout', handleHover.bind('var(--color-grey)'));
 
 ///////////////////////////////////////////////////////////
 //Reveal Section
-const allSections = document.querySelectorAll('.section');
-
 const revealSection = function (entries, observer) {
   const [entry] = entries;
   // console.log(entry);
@@ -163,6 +160,7 @@ const revealSection = function (entries, observer) {
   if (!entry.isIntersecting) return;
 
   entry.target.classList.remove('section--hidden');
+
   observer.unobserve(entry.target);
 };
 
@@ -173,7 +171,7 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 
 allSections.forEach(s => {
   sectionObserver.observe(s);
-  s.classList.add('section--hidden');
+  // s.classList.add('section--hidden');
 });
 
 ///////////////////////////////////////////////////////////

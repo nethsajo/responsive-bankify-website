@@ -1,5 +1,11 @@
 .section-hero {
   padding: 4.8rem 0 8rem 0;
+  min-height: calc(100vh - var(--nav-height));
+}
+
+.section-signup {
+  padding: 9.6rem 0;
+  text-align: center;
 }
 
 .section {
@@ -8,11 +14,6 @@
 
   &--bg {
     background-color: var(--color-white-light);
-  }
-
-  &--signup {
-    padding: 9.6rem 0;
-    text-align: center;
   }
 
   &--hidden {
