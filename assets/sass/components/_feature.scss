@@ -1,6 +1,6 @@
 .feature {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 9.6rem 6.4rem;
   align-items: center;
 
@@ -8,12 +8,28 @@
     gap: 6.4rem 4.8rem;
   }
 
-  @include responsive(phone-xs) {
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  @include responsive(phone) {
+    grid-template-columns: 1fr;
   }
 
   &:not(:last-child) {
     margin-bottom: 9.6rem;
+  }
+
+  &__text-box {
+    &:nth-child(5) {
+      @include responsive(phone) {
+        grid-row: 6;
+      }
+    }
+  }
+
+  &__img-box {
+    &:nth-child(2) {
+      @include responsive(phone) {
+        grid-row: 1;
+      }
+    }
   }
 
   &__img {
