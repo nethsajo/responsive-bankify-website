@@ -1028,7 +1028,7 @@ strong {
 
 .hero__img-box {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   position: relative;
   animation: moveInRight 1.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -1250,6 +1250,8 @@ strong {
 .section-hero {
   padding: 4.8rem 0 8rem 0;
   min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  align-items: center;
 }
 
 .section-signup {
